@@ -1,0 +1,33 @@
+//@import "./images";
+
+@mixin rounded-corners {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+@mixin link-colors($normal, $hover, $visited) {
+  color: $normal;
+  &:hover { color: $hover; }
+  &:visited { color: $visited; }
+}
+
+a {
+    @include link-colors(
+      $normal: gray,
+      $visited: green,
+      $hover: red
+  );
+}
+
+ul{
+  @include link-colors(
+      $normal: blue,
+      $visited: green,
+      $hover: red
+  );
+}
+
+ul{
+	background: url(../images/banner-bg.png) repeat-x;
+}
