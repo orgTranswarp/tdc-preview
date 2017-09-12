@@ -1,0 +1,13 @@
+
+$path: "./images"
+
+@mixin background($imgpath,$position:0 0,$repeat: no-repeat) {
+    background: {
+        image: url($imgpath)
+        position: $position
+        repeat: $repeat
+    }
+}
+ul {
+    @include background('images/banner-bg.png')
+}
